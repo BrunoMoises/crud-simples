@@ -5,36 +5,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cadastro</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="css/main.css" rel="stylesheet">
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Cadastro</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?page=nova&id=">Novo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="?page=listar">Pessoas</a>
-                    </li>
+    <div class="container-fluid">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                    <li><a id="len1" class="hoverable" href="index.php">Home</a></li>
+                    <li><a id="len2" class="hoverable" href="?page=nova&id=">Novo</a></li>
+                    <li><a id="len3" class="hoverable" href="?page=listar">Pessoas</a></li>
                 </ul>
             </div>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="row">
-            <div class="col mt-5">
+        </nav>
+        <div>
+            <div class="page-title">
                 <?php
                 include("config.php");
                 switch (@$_REQUEST["page"]) {
@@ -48,13 +35,17 @@
                         include("salvar-pessoa.php");
                         break;
                     default:
-                        print "<h1>Bem vindo!</h1>";
+                        print "<h2>Bem vindo!</h2>";
+                        print "<p class='lead'>
+                        Este é um CRUD simples feito em Bootstrap utilizando HTML5, CSS3, JavaScript, </br> com back-end em PHP e banco de dados MySQL <br />
+                      </p>";
                 }
                 ?>
             </div>
         </div>
     </div>
-    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

@@ -23,7 +23,7 @@ if($qtd > 0) { ?>
             <td align="center"><?php print date_format(date_create($row->data_nascimento), 'd/m/Y') ?></td>
             <td>
                 <button class="btn btn-success" onclick="editar_pessoa('<?php print $row->id ?>')">Editar</button>
-                <button class="btn btn-danger">Excluir</button>
+                <button class="btn btn-danger" onclick="excluir_pessoa('<?php print $row->id ?>')">Excluir</button>
             </td>
         </tr>
     <?php } ?> 
@@ -35,5 +35,11 @@ if($qtd > 0) { ?>
 <script>
 function editar_pessoa(id) {
     location.href='?page=nova&id='+id;
+}
+
+function excluir_pessoa(id) {
+    if(confirm("Tem certeza que deseja excluir a pessoa de ID "+id+"?")) {
+        location.href='?page=salvar&acao=excluir&id='+id;
+    }
 }
 </script>

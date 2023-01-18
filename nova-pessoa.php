@@ -14,6 +14,10 @@ if($id) {
 } else {
     $acao = "cadastrar";
     $titulo = "Nova Pessoa";
+    $id = '';
+    $nome = '';
+    $email = '';
+    $data_nascimento = '';
 }
 ?>
 <h1><?php print $titulo ?></h1>

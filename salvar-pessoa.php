@@ -37,7 +37,18 @@ switch ($_REQUEST["acao"]) {
         }
         break;
     case "excluir":
+        $id = $_REQUEST["id"];
 
+        $sql = "DELETE FROM pessoa WHERE id=" . $id;
+        $res = $conn->query($sql);
+
+        if ($res = true) {
+            print "<script>alert('Excluido com sucesso');</script>";
+            print "<script>location.href='?page=listar';</script>";
+        } else {
+            print "<script>alert('Não foi possivel excuir');</script>";
+            print "<script>location.href='?page=listar';</script>";
+        }
         break;
 }
 ?>

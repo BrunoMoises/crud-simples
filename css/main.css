@@ -140,3 +140,18 @@ tbody tr:hover {
     color: black;
     background-color: white;
 }
+
+form {
+    width: 30%; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.enviar {
+    background: none !important;
+    text-transform: uppercase;
+    margin-left: 3em;
+    margin-right: 3em;
+    transition: 0.5s color ease-in-out;
+}

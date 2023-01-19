@@ -23,30 +23,22 @@ if ($id) {
 <h2>
     <?php print $titulo ?>
 </h2>
-<form action="?page=salvar" method="POST">
+<form id="form" action="?page=salvar" method="POST">
     <input type="hidden" name="acao" value="<?php print $acao ?>">
     <input type="hidden" name="id" value="<?php print $id ?>">
     <div class="row form-group">
-        <div class="col-md-4">
-            <label>Nome: </label>
-            <input type="text" name="nome" class="form-control" value="<?php print $nome ?>">
-        </div>
+        <label>Nome: </label>
+        <input type="text" name="nome" class="form-control" autocomplete="off" value="<?php print $nome ?>" required>
     </div>
     <div class="row form-group">
-        <div class="col-md-4">
-            <label>E-mail: </label>
-            <input type="email" name="email" class="form-control" value="<?php print $email ?>">
-        </div>
+        <label>E-mail: </label>
+        <input type="email" name="email" class="form-control" autocomplete="off" value="<?php print $email ?>" required>
     </div>
     <div class="row form-group">
-        <div class="col-md-4">
-            <label>Data nascimento: </label>
-            <input type="date" name="data_nasc" class="form-control" value="<?php print $data_nascimento ?>">
-        </div>
+        <label>Data nascimento: </label>
+        <input type="date" name="data_nasc" class="form-control" autocomplete="off" value="<?php print $data_nascimento ?>" required>
     </div>
-    <div class="row form-group">
-        <div class="col-md-4">
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </div>
+    <div class="row form-group container-fluid">
+        <button type="submit" class="btn btn-success">Enviar</button>
     </div>
 </form>

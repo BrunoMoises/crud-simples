@@ -20,28 +20,26 @@
                 </ul>
             </div>
         </nav>
-        <div>
-            <div class="page-title">
-                <?php
-                include("config.php");
-                switch (@$_REQUEST["page"]) {
-                    case "nova":
-                        include("nova-pessoa.php");
-                        break;
-                    case "listar":
-                        include("pessoas.php");
-                        break;
-                    case "salvar":
-                        include("salvar-pessoa.php");
-                        break;
-                    default:
-                        print "<h2>Bem vindo!</h2>";
-                        print "<p class='lead'>
+        <div class="page-title">
+            <?php
+            include("config.php");
+            switch (@$_REQUEST["page"]) {
+                case "nova":
+                    include("nova-pessoa.php");
+                    break;
+                case "listar":
+                    include("pessoas.php");
+                    break;
+                case "salvar":
+                    include("salvar-pessoa.php");
+                    break;
+                default:
+                    print "<h2>Bem vindo!</h2>";
+                    print "<p class='lead'>
                         Este é um CRUD simples feito em Bootstrap utilizando HTML5, CSS3, JavaScript, </br> com back-end em PHP e banco de dados MySQL <br />
                       </p>";
-                }
-                ?>
-            </div>
+            }
+            ?>
         </div>
     </div>
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
